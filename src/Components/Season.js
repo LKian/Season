@@ -1,7 +1,9 @@
 import React from "react";
 
-const Season = () => {
-  return <h1>Check your local time and temp</h1>;
+const Season = (props) => {
+  console.log("lat ", props.lat);
+
+  return <h1>{props.lat}</h1>;
 };
 
 export default Season;

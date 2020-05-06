@@ -1,17 +1,29 @@
 import React from "react";
+import Season from "./Components/Season";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  state = { lat: null, errorMessage: "" };
 
-    this.state = { lat: null, errorMessage: "" };
-
+  // this only gets invoked once
+  componentDidMount() {
+    console.log(
+      "Data loading i.e. making network request to api, getting geolocation.  It is recommended to do data loading in 'componentDidMount' method.  That way, data loading is centralized."
+    );
     window.navigator.geolocation.getCurrentPosition(
-      (position) => this.setState({ lat: position.coords.latitude }),
+      (position) =>
+        this.setState({
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        }),
       (err) => {
         this.setState({ errorMessage: err.message });
       }
     );
+  }
+
+  // called every time a component is updated.  i.e. if the state changes or component receives new props from parent.
+  componentDidUpdate() {
+    console.log("Component Did Update");
   }
 
   render() {
@@ -20,7 +32,11 @@ class App extends React.Component {
     }
 
     if (!this.state.errorMessage && this.state.lat) {
-      return <div>Latitude: {this.state.lat}</div>;
+      return (
+        <div>
+          <Season lat={this.state.lat} />
+        </div>
+      );
     }
 
     return <div>Loading...</div>;
