@@ -1,5 +1,5 @@
 import React from "react";
-import Season from "./Components/Season";
+import SeasonDisplay from "./Components/SeasonDisplay";
 
 class App extends React.Component {
   state = { lat: null, errorMessage: "" };
@@ -9,6 +9,7 @@ class App extends React.Component {
     console.log(
       "Data loading i.e. making network request to api, getting geolocation.  It is recommended to do data loading in 'componentDidMount' method.  That way, data loading is centralized."
     );
+
     window.navigator.geolocation.getCurrentPosition(
       (position) =>
         this.setState({
@@ -34,7 +35,7 @@ class App extends React.Component {
     if (!this.state.errorMessage && this.state.lat) {
       return (
         <div>
-          <Season lat={this.state.lat} />
+          <SeasonDisplay lat={this.state.lat} />
         </div>
       );
     }
