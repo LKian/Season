@@ -29,3 +29,19 @@
 .ui.card .weather-alert .weather-activity {
   margin: 0;
 }
+
+.ui.winter .weather-alert {
+  background-color: aliceblue;
+}
+
+.ui.summer .weather-alert {
+  background-color: orange;
+}
+
+.season-display.winter .icon {
+  color: blue;
+}
+
+.season-display.summer .icon {
+  color: red;
+}

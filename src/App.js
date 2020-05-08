@@ -1,5 +1,6 @@
 import React from "react";
 import SeasonDisplay from "./Components/SeasonDisplay";
+import Spinner from "./Components/Spinner";
 
 class App extends React.Component {
   state = { lat: null, errorMessage: "" };
@@ -39,7 +40,7 @@ class App extends React.Component {
       );
     }
 
-    return <div>Loading...</div>;
+    return <Spinner />;
   }
 }
 

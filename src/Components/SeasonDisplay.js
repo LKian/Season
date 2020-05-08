@@ -25,7 +25,7 @@ const SeasonDisplay = (props) => {
   const { text, iconName } = seasonConfig[season];
 
   return (
-    <div className="ui raised centered card ">
+    <div className={`ui raised centered card season-display ${season}`}>
       <div class="ui top attached label">Current Latitude: {props.lat}</div>
       <div class="weather-season">
         <h2>{season}</h2>
