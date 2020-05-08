@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/season/static/js/main.7d93d4ca.chunk.js",
-    "main.js.map": "/season/static/js/main.7d93d4ca.chunk.js.map",
+    "main.js": "/season/static/js/main.c6b84dfd.chunk.js",
+    "main.js.map": "/season/static/js/main.c6b84dfd.chunk.js.map",
     "runtime-main.js": "/season/static/js/runtime-main.2e3c0b4e.js",
     "runtime-main.js.map": "/season/static/js/runtime-main.2e3c0b4e.js.map",
     "static/js/2.70b4bc4e.chunk.js": "/season/static/js/2.70b4bc4e.chunk.js",
     "static/js/2.70b4bc4e.chunk.js.map": "/season/static/js/2.70b4bc4e.chunk.js.map",
     "index.html": "/season/index.html",
-    "precache-manifest.a13db564dd98f58d70e9ecf3f3760e6d.js": "/season/precache-manifest.a13db564dd98f58d70e9ecf3f3760e6d.js",
+    "precache-manifest.ecca6a501cc1cbb22622a2eca1691a9d.js": "/season/precache-manifest.ecca6a501cc1cbb22622a2eca1691a9d.js",
     "service-worker.js": "/season/service-worker.js",
     "static/js/2.70b4bc4e.chunk.js.LICENSE.txt": "/season/static/js/2.70b4bc4e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2e3c0b4e.js",
     "static/js/2.70b4bc4e.chunk.js",
-    "static/js/main.7d93d4ca.chunk.js"
+    "static/js/main.c6b84dfd.chunk.js"
   ]
 }
