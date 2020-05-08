@@ -13,8 +13,7 @@ class App extends React.Component {
     window.navigator.geolocation.getCurrentPosition(
       (position) =>
         this.setState({
-          lat: position.coords.latitude,
-          lon: position.coords.longitude,
+          lat: position.coords.latitude.toFixed(2),
         }),
       (err) => {
         this.setState({ errorMessage: err.message });
@@ -34,7 +33,7 @@ class App extends React.Component {
 
     if (!this.state.errorMessage && this.state.lat) {
       return (
-        <div>
+        <div class="card-container">
           <SeasonDisplay lat={this.state.lat} />
         </div>
       );

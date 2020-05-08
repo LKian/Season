@@ -1,9 +1,10 @@
+import "./Season.css";
 import React from "react";
 
 // Set up an object with all options: info for summer and winter.
 const seasonConfig = {
-  summer: { text: "Let's hit the beach", iconName: "sun" },
-  winter: { text: "Brrr it's cold!", iconName: "snowflake" },
+  summer: { text: "To the beach", iconName: "sun" },
+  winter: { text: "Brrr, it's cold!", iconName: "snowflake" },
 };
 
 // Fx: Based on month & latitude, determine the user's season.
@@ -19,15 +20,21 @@ const getSeason = (lat, month) => {
 // Fx: Takes two args - lat & month.  Takes run get season fx to determine season
 const SeasonDisplay = (props) => {
   const season = getSeason(props.lat, new Date().getMonth());
-  console.log("season ", season);
+
   // Find the object info for that season.  Pick out text & iconName so I can use it in render
   const { text, iconName } = seasonConfig[season];
 
   return (
-    <div>
-      <i className={`icon ${iconName}`} />
-      <h1>{text}</h1>
-      <i className={`icon ${iconName}`} />
+    <div className="ui raised centered card ">
+      <div class="ui top attached label">Current Latitude: {props.lat}</div>
+      <div class="weather-season">
+        <h2>{season}</h2>
+      </div>
+      <div className="weather-alert">
+        <i className={`icon icon-right big ${iconName}`} />
+        <h3 className="weather-activity">{text}</h3>
+        <i className={`icon icon-right big ${iconName}`} />
+      </div>
     </div>
   );
 };
