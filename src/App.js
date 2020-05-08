@@ -7,7 +7,7 @@ class App extends React.Component {
   // this only gets invoked once
   componentDidMount() {
     console.log(
-      "Data loading i.e. making network request to api, getting geolocation.  It is recommended to do data loading in 'componentDidMount' method.  That way, data loading is centralized."
+      "COMPONENT DID MOUNT: Data loading happens here i.e. making network request to api, getting geolocation.  It is recommended to do data loading in 'componentDidMount' method.  That way, data loading is centralized."
     );
 
     window.navigator.geolocation.getCurrentPosition(
